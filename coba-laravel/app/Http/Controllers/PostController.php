@@ -15,12 +15,12 @@ class PostController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show(Post $post)
     {
         if (Post::all()) {
             return view('post', [
                 "title" => "Single Post",
-                "post" => Post::find($slug)
+                "post" => $post
             ]);
         } else {
             return view('post_not_found');
