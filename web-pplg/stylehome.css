@@ -1,0 +1,109 @@
+/* Font */
+@font-face {
+  font-family: PantonBlackCaps;
+  src: url(../fonts/panton/Panton-blackCaps.otf);
+}
+
+/* Body */
+.home img {
+  background-size: cover;
+  height: 657px;
+  width: 1366px;
+  filter: sepia(8%) brightness(75%) saturate(89%) contrast(59%);
+  -webkit-filter: sepia(8%) brightness(75%) saturate(89%) contrast(59%);
+  -moz-filter: sepia(8%) brightness(75%) saturate(89%) contrast(59%);
+  position: absolute;
+  z-index: -1;
+}
+
+/* Navigasi */
+nav .container-fluid img {
+  width: 70px;
+  height: 70px;
+}
+
+nav .container-fluid a {
+  padding-left: 15px;
+}
+
+/* Section */
+section {
+  font-family: PantonBlackCaps;
+  margin: 170px auto;
+  animation: section;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
+}
+
+section h1 {
+  color: orange;
+}
+
+.typewriter h5 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 1px; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 7.5s infinite, blink-caret 0.75s step-end infinite;
+}
+
+section button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 500ms;
+  color: transparent;
+  background-color: transparent;
+  box-shadow: 1px 1px 15px black;
+  border-radius: 20px;
+}
+
+section button:hover {
+  background-color: orange;
+  box-shadow: 1px 1px 15px orange;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  section {
+    margin: 170px 20px;
+    position: relative;
+    right: 40px;
+  }
+}
+
+/* Animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 275px;
+  }
+  70% {
+    width: 275px;
+  }
+  80% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes section {
+  0% {
+    opacity: 0;
+    margin-left: 10px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 60px;
+  }
+}
