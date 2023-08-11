@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 @section('container')
-
+<h1 class="">Post by {{ $author->name }}</h1>
   @foreach ($posts as $post)
   <article class="mb-5 pb-4 border-bottom">
     <h2>
