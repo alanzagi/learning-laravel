@@ -43,6 +43,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected $load = ['author', 'category'];
+
     public function posts()
     {
         return $this->hasMany(Post::class);
